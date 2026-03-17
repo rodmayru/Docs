@@ -1,0 +1,95 @@
+Provar aplicació localment
+python -m venv venv
+venv\Scripts\activate  # A Windows
+pip install -r requirements.txt
+
+python -m pip install --upgrade pip
+
+python app.py # Exec python
+
+
+
+9. Passos per pujar-ho a GitHub
+Segueix aquests passos des del Visual Studio Code (assegura't de tenir Git instal·lat):
+
+1) Inicialitzar Repositori:
+Obre la terminal a VS Code (Ctrl + ñ).
+Escriu: git init
+
+2) Afegir fitxers:
+Escriu: git add .
+
+3) Fer el primer commit:
+Escriu: git commit -m "Primera versió de l'aplicació d'etiquetes"
+
+4) Crear repositori a GitHub:
+Ves a github.com i crea un repositori nou (pots dir-li generador-etiquetes). No l'inicialitzis amb README ni .gitignore des de la web (ja els tens locals).
+Copia la URL del repositori (ex: https://github.com/elteuusuari/generador-etiquetes.git).
+
+5) Connectar i Pujar:
+A la terminal de VS Code
+git remote add origin https://github.com/elteuusuari/generador-etiquetes.git
+git branch -M main
+git push -u origin main
+
+CREAR EXECUTABLE
+
+1) A l'ordinador de desenvolupament si no està la llibreria
+
+# Activa l'entorn virtual (si en tens)
+venv\Scripts\activate
+
+# Instal·la PyInstaller i dependències
+pip install pyinstaller pyinstaller-hooks-contrib
+
+# Assegura't de tenir totes les dependències
+pip install -r requirements.txt
+
+2) Crear build
+3) Llençar build
+    python build.py
+	
+	
+PALETA COLORS
+#99B898 - Verd
+#FECEA8 - Groc
+#FF847c - Taronja
+#E84A5F - Vermell
+#2A363B - Gris fosc
+
+
+1. Compila projecte
+
+npm run build
+
+2. Instal·la Capacitor
+
+# Instal·la el nucli de Capacitor
+npm i @capacitor/core @capacitor/cli
+
+# Inicialitza Capacitor (posa-li el nom que vulguis a l'app)
+npx cap init
+
+3. Afegeix la plataforma Android
+npm i @capacitor/android
+npx cap add android
+
+4. Sincronitza el codi
+npm run build
+npx cap copy
+
+5. Genera l'APK amb Android Studio
+npx cap open android
+
+===========================
+RECOMPILAR PROJECTE ANDROID
+===========================
+* Desde Visual Studio
+# Netejar i tornar a construir
+npm run build
+npx cap sync android
+
+# Si això no funciona, prova amb:
+npx cap copy android
+
+
